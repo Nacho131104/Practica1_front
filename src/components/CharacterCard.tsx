@@ -4,14 +4,13 @@ import "./styles.css";
 export const CharacterCard = ({ personaje }: { personaje: CharacterApi }) => {
     return (
         <div className="characterDataContainer">
-            <h2>{personaje.name}</h2>
-            <p><strong>Height:</strong> {personaje.height}</p>
-            <p><strong>Mass:</strong> {personaje.mass}</p>
-            <p><strong>Gender:</strong> {personaje.gender}</p>
-            <p><strong>Birth:</strong> {personaje.birth_year}</p>
-            <hr />
-            <p>🎬 Films: {personaje.films.length}</p>
-            <p>🚀 Starships: {personaje.starships.length}</p>
+            <h3 style={{ margin: '0 0 10px 0', color: '#2c3e50' }}>{personaje.name}</h3>
+            <p><strong>Altura:</strong> {personaje.height}cm</p>
+            <p><strong>Peso:</strong> {personaje.mass}kg</p>
+            <p><strong>Género:</strong> {personaje.gender}</p>
+            <p style={{ fontSize: '0.8rem', color: '#666', marginTop: 'auto' }}>
+                ID: {personaje.url.split('/').filter(Boolean).pop()}
+            </p>
         </div>
     );
-}
+};
