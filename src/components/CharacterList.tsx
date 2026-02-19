@@ -1,7 +1,7 @@
 
 import type { CharacterApi } from "../types/CharacterApi"
 import { CharacterCard } from "./CharacterCard"
-import "./styles.css"
+import "../styles/styles.css"
 
 export const CharacterList = (params: {personajes: CharacterApi[]})=>{
 

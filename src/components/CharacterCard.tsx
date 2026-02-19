@@ -1,5 +1,5 @@
 import type { CharacterApi } from "../types/CharacterApi"
-import "./styles.css";
+import "../styles/styles.css";
 
 export const CharacterCard = ({ personaje }: { personaje: CharacterApi }) => {
     return (
