@@ -1,0 +1,33 @@
+.mainContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap; /* Permite que los elementos pasen a la siguiente fila */
+    justify-content: center; /* Centra las tarjetas */
+    gap: 20px;
+    padding: 20px;
+}
+
+.characterDataContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    width: 250px; /* Tamaño fijo para que se vean "pequeñas" */
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    font-size: 0.9rem; /* Fuente un poco más pequeña */
+}
+
+.characterDataContainer h2 {
+    font-size: 1.2rem;
+    margin-bottom: 8px;
+    color: #2c3e50;
+    border-bottom: 1px solid #eee;
+}
+
+.characterDataContainer p {
+    margin: 2px 0;
+    word-break: break-all; /* Para que las URLs largas no rompan el diseño */
+}
