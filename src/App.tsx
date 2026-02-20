@@ -31,7 +31,7 @@ function App() {
     }
   }, [urlActual, busquedaIniciada]);
 
-  const manejarBusquedaInicial = () => {
+  const BusquedaInicial = () => {
     setBusquedaIniciada(true);
     llamadaApi(urlActual);
   };
@@ -50,8 +50,8 @@ function App() {
           </button>
         )}
 
-        <button onClick={manejarBusquedaInicial} disabled={loading}>
-          {busquedaIniciada ? "Actualizar Lista" : "Buscar Personajes"}
+        <button onClick={BusquedaInicial} disabled={loading}>
+          {busquedaIniciada ? "": "Buscar Personajes"}
         </button>
 
         {busquedaIniciada && respuesta && (
@@ -64,8 +64,8 @@ function App() {
         )}
       </div>
 
-      {loading && <p>Cargando página...</p>}
-      {error && <p>{error}</p>}
+      {loading && <p>Loading...</p>}
+      {error && <p>Error: {error}</p>}
       
       {busquedaIniciada && respuesta && <CharacterList personajes={respuesta.results} />}
       
